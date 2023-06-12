@@ -15,7 +15,7 @@ while (true)
         Console.WriteLine($"{val} is NOT prime number");
 
     }
-    Console.ReadLine();
+    
 }
 
 

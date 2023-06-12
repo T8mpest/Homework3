@@ -8,7 +8,7 @@ while (true)
 
     if (condition)
     {
-        Console.WriteLine($" {val} is a prime number ");
+        Console.WriteLine($"{val} is a prime number ");
     }
     else
     {
@@ -17,8 +17,6 @@ while (true)
     }
     
 }
-
-
 
 static bool IsPrime(int val)
 {

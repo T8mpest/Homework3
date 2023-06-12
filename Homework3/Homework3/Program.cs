@@ -1,14 +1,38 @@
 ﻿
-var strValue = Console.ReadLine();  
-var val = int.Parse(strValue);
-var condition = val >= 1 && val / val == 1;
-if (condition)
+using System.Runtime.InteropServices;
+while (true)
 {
-    Console.WriteLine($" {val} is a prime number ");
+    Console.Write("Write your number ");
+    var val = int.Parse(Console.ReadLine());
+    var condition = (IsPrime(val));
+
+    if (condition)
+    {
+        Console.WriteLine($" {val} is a prime number ");
+    }
+    else
+    {
+        Console.WriteLine($"{val} is NOT prime number");
+
+    }
+    Console.ReadLine();
 }
-else
+
+
+
+static bool IsPrime(int val)
 {
-    Console.WriteLine($"{val} is NOT prime number");
+    if (val < 2)
+        return false;
+
+    for (int i = 2; i <= val / 2; i++)
+    {
+        if (val % i == 0)
+            return false;
+    }
+
+    return true;
 }
-Console.ReadLine();
+
+
 
